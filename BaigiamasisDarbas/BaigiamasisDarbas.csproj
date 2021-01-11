@@ -17,8 +17,4 @@
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.28.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="BaigiamasisProjektas\Test\" />
-  </ItemGroup>
-
 </Project>
