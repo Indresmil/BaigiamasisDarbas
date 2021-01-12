@@ -17,7 +17,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             driver = new ChromeDriver();
             driver.Url = "https://letenos.lt/";
             driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
             
         }
         [TearDown]

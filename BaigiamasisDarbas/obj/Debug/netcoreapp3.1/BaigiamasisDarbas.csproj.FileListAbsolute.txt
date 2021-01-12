@@ -95,3 +95,4 @@ C:\Users\Home PC\Desktop\CSharp\BaigiamasisDarbas\BaigiamasisDarbas\obj\Debug\ne
 C:\Users\Home PC\Desktop\CSharp\BaigiamasisDarbas\BaigiamasisDarbas\obj\Debug\netcoreapp3.1\BaigiamasisDarbas.dll
 C:\Users\Home PC\Desktop\CSharp\BaigiamasisDarbas\BaigiamasisDarbas\obj\Debug\netcoreapp3.1\BaigiamasisDarbas.pdb
 C:\Users\Home PC\Desktop\CSharp\BaigiamasisDarbas\BaigiamasisDarbas\obj\Debug\netcoreapp3.1\BaigiamasisDarbas.genruntimeconfig.cache
+C:\Users\Home PC\Desktop\CSharp\BaigiamasisDarbas\BaigiamasisDarbas\obj\Debug\netcoreapp3.1\BaigiamasisDarbas.csprojAssemblyReference.cache
