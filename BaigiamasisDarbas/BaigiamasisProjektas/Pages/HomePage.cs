@@ -33,7 +33,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         }
         public void AssertCorrectSearch()
         {
-            Assert.AreEqual("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS", driver.FindElement(By.LinkText("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS")).Text);
+            Assert.AreEqual("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS", item.Text);
         }
         public void SelectColor()
         {
@@ -41,7 +41,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         }
         public void AssertColorSelect()
         {
-            Assert.AreEqual("Mėlyna", driver.FindElement(By.CssSelector("#pa_spalva > option:nth-child(7)")).Text);
+            Assert.AreEqual("Mėlyna", colorSelect.Text);
         }
         public void SelectSize()
         {
@@ -49,7 +49,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         }
         public void AssertSizeSelect()
         {
-            Assert.AreEqual("L", driver.FindElement(By.CssSelector("#pa_dydis > option:nth-child(2)")).Text);
+            Assert.AreEqual("L", sizeSelect.Text);
         }
         public void SearchFail()
         {

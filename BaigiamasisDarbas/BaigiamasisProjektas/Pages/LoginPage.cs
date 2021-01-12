@@ -14,26 +14,18 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement username => driver.FindElement(By.Name("username"));
         private IWebElement password => driver.FindElement(By.Name("password"));
         private IWebElement logoutButton => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-MyAccount-content > p:nth-child(2) > a"));
-
+        private IWebElement errrorMessage => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-notices-wrapper > ul > li"));
         public void NavigateToLoginPage()
         {
             navigate.Click();
         }
-        public void IncorrectUsernameInput()
+        public void UsernameInput(string vardas)
         {
-            username.SendKeys("indre@gmail.com");
+            username.SendKeys(vardas);
         }
-        public void UsernameInput()
+        public void PasswordInput(string slaptazodis)
         {
-            username.SendKeys("indre.smilgaityte@gmail.com");
-        }
-        public void PasswordInput()
-        {
-            password.SendKeys("slaptazodis123" + Keys.Enter);
-        }
-        public void IncorrectPasswordInput()
-        {
-            password.SendKeys("slaptazodis" + Keys.Enter);
+            password.SendKeys(slaptazodis + Keys.Enter);
         }
         public void AssertLogoutButtonVisible()
         {
@@ -41,11 +33,11 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         }
         public void AssertIncorrectPassword()
         {
-            Assert.AreEqual("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.", driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-notices-wrapper > ul > li")).Text);
+            Assert.AreEqual("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.", errrorMessage.Text);
         }
         public void AssertIncorrectUsername()
         {
-            Assert.AreEqual("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.", driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-notices-wrapper > ul > li")).Text);
+            Assert.AreEqual("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.", errrorMessage.Text);
         }
     }
 

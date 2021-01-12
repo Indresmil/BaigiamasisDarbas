@@ -8,20 +8,27 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
 {
     class Cart : BaseTests
     {
-        private CartPage basketPage;
+        private CartPage cartPage;
 
         [SetUp]
 
         public void Beforetest()
         {
-            basketPage = new CartPage (driver);
+            cartPage = new CartPage (driver);
         }
 
         [Test]
         public void AddToCart()
         {
-            basketPage.AddToCart();
-            basketPage.AssertAddedToCart();
+            cartPage.AddToCart();
+            cartPage.AssertAddedToCart();
+        }
+
+        [Test]
+        public void CartPreview()
+        {
+            cartPage.CartPreview();
+            cartPage.AssertContinueBillingButtonVisible();
         }
     }
 }

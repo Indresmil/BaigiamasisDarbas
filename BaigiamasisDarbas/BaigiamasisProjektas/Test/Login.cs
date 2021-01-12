@@ -12,7 +12,6 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
 
 
         [SetUp]
-
         public void Beforetest()
         {
             loginPage = new LoginPage(driver);
@@ -22,8 +21,8 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         public void IncorrectUserName()
         {
             loginPage.NavigateToLoginPage();
-            loginPage.IncorrectUsernameInput();
-            loginPage.PasswordInput();
+            loginPage.UsernameInput("indre@gmail.com");
+            loginPage.PasswordInput("slaptazodis123");
             loginPage.AssertIncorrectUsername();
         }
 
@@ -31,19 +30,38 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         public void IncorrectPassword()
         {
             loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput();
-            loginPage.IncorrectPasswordInput();
+            loginPage.UsernameInput("indre.smilgaityte@gmail.com");
+            loginPage.PasswordInput("slaptazodis");
             loginPage.AssertIncorrectPassword();
+        }
+
+        [Test]
+        public void PasswordKeySensitive()
+        {
+            loginPage.NavigateToLoginPage();
+            loginPage.UsernameInput("indre.smilgaityte@gmail.com");
+            loginPage.PasswordInput("SLAPTAZODIS123");
+            loginPage.AssertIncorrectPassword();
+        }
+
+        [Test]
+        public void UsernameKeyInsensitive()
+        {
+            loginPage.NavigateToLoginPage();
+            loginPage.UsernameInput("INDRE.SMILGAITYTE@gmail.com");
+            loginPage.PasswordInput("slaptazodis123");
+            loginPage.AssertLogoutButtonVisible();
         }
 
         [Test]
         public void UserLogin()
         {
             loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput();
-            loginPage.PasswordInput();
-            loginPage.AssertLogoutButtonVisible();   
+            loginPage.UsernameInput("indre.smilgaityte@gmail.com");
+            loginPage.PasswordInput("slaptazodis123");
+            loginPage.AssertLogoutButtonVisible();
         }
     }
-
 }
+
+

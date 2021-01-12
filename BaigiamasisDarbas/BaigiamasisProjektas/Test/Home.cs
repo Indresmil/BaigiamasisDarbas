@@ -12,14 +12,12 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
 
 
         [SetUp]
-
         public void Beforetest()
         {
             homePage = new HomePage(driver);
         }
 
         [Test]
-
         public void CorrectSearch()
         {
             homePage.NavigateToSearch();
@@ -28,7 +26,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         }
 
         [Test]
-        public void SelectColorAndSize()
+        public void SelectItemColorAndSize()
         {
             homePage.NavigateToSearch();
             homePage.CorrectSearch();
