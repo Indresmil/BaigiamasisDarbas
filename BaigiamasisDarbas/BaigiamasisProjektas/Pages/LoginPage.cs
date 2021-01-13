@@ -14,7 +14,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement username => driver.FindElement(By.Name("username"));
         private IWebElement password => driver.FindElement(By.Name("password"));
         private IWebElement logoutButton => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-MyAccount-content > p:nth-child(2) > a"));
-        private IWebElement errrorMessage => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-notices-wrapper > ul > li"));
+        private IWebElement errorMessage => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-notices-wrapper > ul > li"));
         public void NavigateToLoginPage()
         {
             navigate.Click();
@@ -31,13 +31,13 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         {
             Assert.IsTrue(logoutButton.Displayed);
         }
-        public void AssertIncorrectPassword()
+        public void AssertIncorrectPassword(string error)
         {
-            Assert.AreEqual("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.", errrorMessage.Text);
+            Assert.AreEqual(error, errorMessage.Text);
         }
-        public void AssertIncorrectUsername()
+        public void AssertIncorrectUsername(string error)
         {
-            Assert.AreEqual("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.", errrorMessage.Text);
+            Assert.AreEqual(error, errorMessage.Text);
         }
     }
 

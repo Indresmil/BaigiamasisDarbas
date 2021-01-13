@@ -21,21 +21,35 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         public void CorrectSearch()
         {
             homePage.NavigateToSearch();
-            homePage.CorrectSearch();
-            homePage.AssertCorrectSearch();   
+            homePage.CorrectSearch("petnešos");
+            homePage.AssertCorrectSearch("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS");   
         }
 
         [Test]
         public void SelectItemColorAndSize()
         {
             homePage.NavigateToSearch();
-            homePage.CorrectSearch();
+            homePage.CorrectSearch("petnešos");
             homePage.CorrectSearhClick();
             homePage.SelectColor();
             homePage.SelectSize();
-            homePage.AssertColorSelect();
-            homePage.AssertSizeSelect();
+            homePage.AssertColorSelect("Mėlyna");
+            homePage.AssertSizeSelect("L");
         }
 
+        [Test]
+        public void FacebookWorking()
+        {
+            homePage.FacebookClick();
+            homePage.AssertFacebookWorking();    
+        }
+
+        [Test]
+        public void InstagramWorking()
+        {
+            homePage.InstagramClick();
+            homePage.AssertInstagramWorking();
+        }
     }
 }
+

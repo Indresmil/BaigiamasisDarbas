@@ -23,7 +23,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             loginPage.NavigateToLoginPage();
             loginPage.UsernameInput("indre@gmail.com");
             loginPage.PasswordInput("slaptazodis123");
-            loginPage.AssertIncorrectUsername();
+            loginPage.AssertIncorrectUsername("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
         }
 
         [Test]
@@ -32,7 +32,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             loginPage.NavigateToLoginPage();
             loginPage.UsernameInput("indre.smilgaityte@gmail.com");
             loginPage.PasswordInput("slaptazodis");
-            loginPage.AssertIncorrectPassword();
+            loginPage.AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             loginPage.NavigateToLoginPage();
             loginPage.UsernameInput("indre.smilgaityte@gmail.com");
             loginPage.PasswordInput("SLAPTAZODIS123");
-            loginPage.AssertIncorrectPassword();
+            loginPage.AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
         }
 
         [Test]

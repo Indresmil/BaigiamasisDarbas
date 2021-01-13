@@ -11,24 +11,33 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         private CartPage cartPage;
 
         [SetUp]
-
-        public void Beforetest()
+        public void BeforeTest()
         {
-            cartPage = new CartPage (driver);
+            cartPage = new CartPage(driver);
         }
 
         [Test]
         public void AddToCart()
         {
             cartPage.AddToCart();
-            cartPage.AssertAddedToCart();
+            cartPage.AssertAddedToCart("“Alpha Spirit tik su žuvimi, 200 gr” - įdėtas į krepšelį");
         }
 
         [Test]
         public void CartPreview()
         {
             cartPage.CartPreview();
-            cartPage.AssertContinueBillingButtonVisible();
+            cartPage.AssertContinueBillingButtonVisible("TĘSTI ATSISKAITYMĄ");
         }
+
+       /* [Test]
+
+         public void ProductInCartIntrease()
+         {
+             cartPage.CartPreview();
+             cartPage.IncreaseProductUpdate();
+             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+             cartPage.AssertMessagePopUp();
+         } */
     }
 }

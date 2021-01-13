@@ -18,42 +18,58 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement colorSelect => driver.FindElement(By.CssSelector("#pa_spalva > option:nth-child(7)"));
         private IWebElement size => driver.FindElement(By.CssSelector("#pa_dydis"));
         private IWebElement sizeSelect => driver.FindElement(By.CssSelector("#pa_dydis > option:nth-child(2)"));
+        private IWebElement facebook => driver.FindElement(By.CssSelector("#social-icons > a:nth-child(1) > i"));
+        private IWebElement facebookText => driver.FindElement(By.CssSelector("#u_0_0 > span._33vv > a"));
+        private IWebElement instagram => driver.FindElement(By.CssSelector("#social-icons > a:nth-child(2) > i"));
+        private IWebElement instagramText => driver.FindElement(By.CssSelector("#react-root > section > main > div > header > section > div.nZSzR"));
 
         public void NavigateToSearch()
         {
             searchIcon.Click();
         }
-        public void CorrectSearch()
+        public void CorrectSearch(string product)
         {
-            search.SendKeys("petnešos" + Keys.Enter);
+            search.SendKeys(product + Keys.Enter);
         }
         public void CorrectSearhClick()
         {
             item.Click();
         }
-        public void AssertCorrectSearch()
+        public void AssertCorrectSearch(string pickProduct)
         {
-            Assert.AreEqual("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS", item.Text);
+            Assert.AreEqual(pickProduct, item.Text);
         }
         public void SelectColor()
         {
             colorSelect.Click();
         }
-        public void AssertColorSelect()
+        public void AssertColorSelect(string pickColor)
         {
-            Assert.AreEqual("Mėlyna", colorSelect.Text);
+            Assert.AreEqual(pickColor, colorSelect.Text);
         }
         public void SelectSize()
         {
             sizeSelect.Click();
         }
-        public void AssertSizeSelect()
+        public void AssertSizeSelect(string pickSize)
         {
-            Assert.AreEqual("L", sizeSelect.Text);
+            Assert.AreEqual(pickSize, sizeSelect.Text);
         }
-        public void SearchFail()
+        public void FacebookClick()
         {
-            search.SendKeys("$" + Keys.Enter);
+            facebook.Click();
+        }
+        public void AssertFacebookWorking()
+        {
+            Assert.AreEqual("Letenos.lt", facebookText.Text);
+        }
+        public void InstagramClick()
+        {
+            instagram.Click();
+        }
+        public void AssertInstagramWorking()
+        {
+            Assert.AreEqual("letenos.lt\r\nFollow", instagramText.Text);
         }
     }
 }
