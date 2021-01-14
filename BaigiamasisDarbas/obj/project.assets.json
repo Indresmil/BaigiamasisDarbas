@@ -455,12 +455,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Selenium.Firefox.WebDriver/0.27.0": {
-        "type": "package",
-        "build": {
-          "build/Selenium.Firefox.WebDriver.targets": {}
-        }
-      },
       "Selenium.Support/3.141.0": {
         "type": "package",
         "dependencies": {
@@ -489,12 +483,6 @@
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
-        }
-      },
-      "Selenium.WebDriver.GeckoDriver/0.28.0": {
-        "type": "package",
-        "build": {
-          "build/Selenium.WebDriver.GeckoDriver.targets": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -1926,19 +1914,6 @@
         "runtime.native.system.nuspec"
       ]
     },
-    "Selenium.Firefox.WebDriver/0.27.0": {
-      "sha512": "HwCaTaa+snzkLF7ZVaxKSmdttKm+KXT7HOY8c1q8p9E7x05+WHqw5XaZjUGFytVT1+0FkgUoH/u/I+csPLeJAg==",
-      "type": "package",
-      "path": "selenium.firefox.webdriver/0.27.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Selenium.Firefox.WebDriver.targets",
-        "driver/geckodriver.exe",
-        "selenium.firefox.webdriver.0.27.0.nupkg.sha512",
-        "selenium.firefox.webdriver.nuspec"
-      ]
-    },
     "Selenium.Support/3.141.0": {
       "sha512": "F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
       "type": "package",
@@ -1992,24 +1967,6 @@
         "nupkg-icon.png",
         "selenium.webdriver.chromedriver.87.0.4280.8800.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
-      ]
-    },
-    "Selenium.WebDriver.GeckoDriver/0.28.0": {
-      "sha512": "vW4OyxJAIQxZSjPxKtOlLClA2gSBvZUvzSdWTXeKJCXbgRyefdCaYRSEkaGqwxz7Ck+vBTXeRxd7v7LS6uoUfQ==",
-      "type": "package",
-      "path": "selenium.webdriver.geckodriver/0.28.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/DefinePropertiesGeckoDriver.targets",
-        "build/Selenium.WebDriver.GeckoDriver.targets",
-        "driver/linux64/geckodriver",
-        "driver/mac64/geckodriver",
-        "driver/win32/geckodriver.exe",
-        "driver/win64/geckodriver.exe",
-        "nupkg-icon.png",
-        "selenium.webdriver.geckodriver.0.28.0.nupkg.sha512",
-        "selenium.webdriver.geckodriver.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -4646,11 +4603,9 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
-      "Selenium.Firefox.WebDriver >= 0.27.0",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
-      "Selenium.WebDriver.ChromeDriver >= 87.0.4280.8800",
-      "Selenium.WebDriver.GeckoDriver >= 0.28.0"
+      "Selenium.WebDriver.ChromeDriver >= 87.0.4280.8800"
     ]
   },
   "packageFolders": {
@@ -4704,10 +4659,6 @@
             "target": "Package",
             "version": "[3.16.1, )"
           },
-          "Selenium.Firefox.WebDriver": {
-            "target": "Package",
-            "version": "[0.27.0, )"
-          },
           "Selenium.Support": {
             "target": "Package",
             "version": "[3.141.0, )"
@@ -4719,10 +4670,6 @@
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
             "version": "[87.0.4280.8800, )"
-          },
-          "Selenium.WebDriver.GeckoDriver": {
-            "target": "Package",
-            "version": "[0.28.0, )"
           }
         },
         "imports": [

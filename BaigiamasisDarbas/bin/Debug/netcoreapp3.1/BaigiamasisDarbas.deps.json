@@ -11,11 +11,9 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.16.1",
-          "Selenium.Firefox.WebDriver": "0.27.0",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "87.0.4280.8800",
-          "Selenium.WebDriver.GeckoDriver": "0.28.0"
+          "Selenium.WebDriver.ChromeDriver": "87.0.4280.8800"
         },
         "runtime": {
           "BaigiamasisDarbas.dll": {}
@@ -399,7 +397,6 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "Selenium.Firefox.WebDriver/0.27.0": {},
       "Selenium.Support/3.141.0": {
         "dependencies": {
           "Selenium.WebDriver": "3.141.0"
@@ -423,7 +420,6 @@
         }
       },
       "Selenium.WebDriver.ChromeDriver/87.0.4280.8800": {},
-      "Selenium.WebDriver.GeckoDriver/0.28.0": {},
       "System.AppContext/4.1.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -984,13 +980,6 @@
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
-    "Selenium.Firefox.WebDriver/0.27.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-HwCaTaa+snzkLF7ZVaxKSmdttKm+KXT7HOY8c1q8p9E7x05+WHqw5XaZjUGFytVT1+0FkgUoH/u/I+csPLeJAg==",
-      "path": "selenium.firefox.webdriver/0.27.0",
-      "hashPath": "selenium.firefox.webdriver.0.27.0.nupkg.sha512"
-    },
     "Selenium.Support/3.141.0": {
       "type": "package",
       "serviceable": true,
@@ -1011,13 +1000,6 @@
       "sha512": "sha512-7bgZ2QNhYFofxDdlGVfUVgNJ6B785u/UeoFjEzB7O2EiggPitosPqqB/TG0KpJwvqgQTs+nNJus3rn9yNMHa1A==",
       "path": "selenium.webdriver.chromedriver/87.0.4280.8800",
       "hashPath": "selenium.webdriver.chromedriver.87.0.4280.8800.nupkg.sha512"
-    },
-    "Selenium.WebDriver.GeckoDriver/0.28.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vW4OyxJAIQxZSjPxKtOlLClA2gSBvZUvzSdWTXeKJCXbgRyefdCaYRSEkaGqwxz7Ck+vBTXeRxd7v7LS6uoUfQ==",
-      "path": "selenium.webdriver.geckodriver/0.28.0",
-      "hashPath": "selenium.webdriver.geckodriver.0.28.0.nupkg.sha512"
     },
     "System.AppContext/4.1.0": {
       "type": "package",

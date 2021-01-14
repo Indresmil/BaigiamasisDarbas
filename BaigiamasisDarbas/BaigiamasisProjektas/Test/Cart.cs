@@ -29,15 +29,6 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             cartPage.CartPreview();
             cartPage.AssertContinueBillingButtonVisible("TĘSTI ATSISKAITYMĄ");
         }
-
-       /* [Test]
-
-         public void ProductInCartIntrease()
-         {
-             cartPage.CartPreview();
-             cartPage.IncreaseProductUpdate();
-             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
-             cartPage.AssertMessagePopUp();
-         } */
+   
     }
 }

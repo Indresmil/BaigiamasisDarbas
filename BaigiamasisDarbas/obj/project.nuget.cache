@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5LYl/nc963cP/QYbT23U6A/ojh7LWelm738VdsWEoXuTLPBT2HeWM6/TyHaU4aAhdtu/BKEjCMURNYhu4ND/CQ==",
+  "dgSpecHash": "NmVNkp5FS7phPzp+oaM2ihLIYKZs35pIi3zb0x5kk39Gk/uncKKS/qpRlUIR4CwvKGpDtxiVmyNDvnC8oVHl+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Home PC\\Desktop\\CSharp\\BaigiamasisDarbas\\BaigiamasisDarbas\\BaigiamasisDarbas.csproj",
   "expectedPackageFiles": [
@@ -20,11 +20,9 @@
     "C:\\Users\\Home PC\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
-    "C:\\Users\\Home PC\\.nuget\\packages\\selenium.firefox.webdriver\\0.27.0\\selenium.firefox.webdriver.0.27.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\selenium.webdriver.chromedriver\\87.0.4280.8800\\selenium.webdriver.chromedriver.87.0.4280.8800.nupkg.sha512",
-    "C:\\Users\\Home PC\\.nuget\\packages\\selenium.webdriver.geckodriver\\0.28.0\\selenium.webdriver.geckodriver.0.28.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
