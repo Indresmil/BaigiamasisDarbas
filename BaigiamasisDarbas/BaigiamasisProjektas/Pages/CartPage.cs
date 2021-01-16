@@ -18,29 +18,33 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement productAdded => driver.FindElement(By.CssSelector("#content > article > div.woocommerce-notices-wrapper > div"));
         private IWebElement billingButtonVisible => driver.FindElement(By.CssSelector("#content > article > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-10 > div > div > div > div.cart-collaterals > div > div > a"));
         
-        public void AddToCart()
+        public CartPage AddToCart()
         {
             searchIcon.Click();
             search.SendKeys("Alpha Spirit tik su žuvimi" + Keys.Enter);
             findItem.Click();
             addToCart.Click();
+            return this;
         }
-        public void AssertAddedToCart(string productInTheCart)
+        public CartPage AssertAddedToCart(string productInTheCart)
         {
             Assert.AreEqual(productInTheCart, productAdded.Text);
+            return this;
         }
 
-        public void CartPreview()
+        public CartPage CartPreview()
         {
             searchIcon.Click();
             search.SendKeys("Alpha Spirit tik su žuvimi" + Keys.Enter);
             findItem.Click();
             addToCart.Click();
             navigateToChart.Click();
+            return this;
         }
-        public void AssertContinueBillingButtonVisible(string buttonMessage)
+        public CartPage AssertContinueBillingButtonVisible(string buttonMessage)
         {
             Assert.AreEqual(buttonMessage, billingButtonVisible.Text);
+            return this;
         }
 
     }

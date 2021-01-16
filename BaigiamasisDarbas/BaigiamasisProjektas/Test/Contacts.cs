@@ -19,23 +19,26 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         [Test]
         public void AddToCart()
         {
-            contactsPage.GoToContacts();
-            contactsPage.AssertContactsPageWorking();
+            contactsPage
+                .GoToContacts()
+                .AssertContactsPageWorking();
         }
 
         [Test]
         public void IncorrectEmailMessageShow()
         {
-            contactsPage.GoToContacts();
-            contactsPage.AddToEmailLine("a");
-            contactsPage.AssertIncorectEmail("Please enter a valid email address.");
+            contactsPage
+                .GoToContacts()
+                .AddToEmailLine("a")
+                .AssertIncorectEmail("Please enter a valid email address.");
         }
         [Test]
         public void FillNameFieldMessageShow()
         {
-            contactsPage.GoToContacts();
-            contactsPage.AddToEmailLine("a@gmail.com");
-            contactsPage.AssertFillInNameField("Šis laukas privalomas.");
+            contactsPage
+                .GoToContacts()
+                .AddToEmailLine("a@gmail.com")
+                .AssertFillInNameField("Šis laukas privalomas.");
         }
     }
 }

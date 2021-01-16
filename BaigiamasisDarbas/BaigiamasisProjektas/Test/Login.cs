@@ -20,46 +20,50 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         [Test]
         public void IncorrectUserName()
         {
-            loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput("indre@gmail.com");
-            loginPage.PasswordInput("slaptazodis123");
-            loginPage.AssertIncorrectUsername("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
+            loginPage
+                .NavigateToLoginPage()
+                .UsernameInput("indre@gmail.com")
+                .PasswordInput("slaptazodis123")
+                .AssertIncorrectUsername("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
         }
 
         [Test]
         public void IncorrectPassword()
         {
-            loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput("indre.smilgaityte@gmail.com");
-            loginPage.PasswordInput("slaptazodis");
-            loginPage.AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
+            loginPage
+                .NavigateToLoginPage()
+                .UsernameInput("indre.smilgaityte@gmail.com")
+                .PasswordInput("slaptazodis")
+                .AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
+        }
+        [Test]
+        public void UsernameKeyInsensitive()
+        {
+            loginPage
+                .NavigateToLoginPage()
+                .UsernameInput("INDRE.SMILGAITYTE@gmail.com")
+                .PasswordInput("slaptazodis123")
+                .AssertLogoutButtonVisible();
         }
 
         [Test]
         public void PasswordKeySensitive()
         {
-            loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput("indre.smilgaityte@gmail.com");
-            loginPage.PasswordInput("SLAPTAZODIS123");
-            loginPage.AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
-        }
-
-        [Test]
-        public void UsernameKeyInsensitive()
-        {
-            loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput("INDRE.SMILGAITYTE@gmail.com");
-            loginPage.PasswordInput("slaptazodis123");
-            loginPage.AssertLogoutButtonVisible();
+            loginPage
+                .NavigateToLoginPage()
+                .UsernameInput("indre.smilgaityte@gmail.com")
+                .PasswordInput("SLAPTAZODIS123")
+                .AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
         }
 
         [Test]
         public void UserLogin()
         {
-            loginPage.NavigateToLoginPage();
-            loginPage.UsernameInput("indre.smilgaityte@gmail.com");
-            loginPage.PasswordInput("slaptazodis123");
-            loginPage.AssertLogoutButtonVisible();
+            loginPage
+                .NavigateToLoginPage()
+                .UsernameInput("indre.smilgaityte@gmail.com")
+                .PasswordInput("slaptazodis123")
+                .AssertLogoutButtonVisible();
         }
     }
 }

@@ -15,29 +15,35 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement password => driver.FindElement(By.Name("password"));
         private IWebElement logoutButton => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-MyAccount-content > p:nth-child(2) > a"));
         private IWebElement errorMessage => driver.FindElement(By.CssSelector("#content > article > div > div > div.woocommerce-notices-wrapper > ul > li"));
-        public void NavigateToLoginPage()
+        public LoginPage NavigateToLoginPage()
         {
             navigate.Click();
+            return this;
         }
-        public void UsernameInput(string vardas)
+        public LoginPage UsernameInput(string vardas)
         {
             username.SendKeys(vardas);
+            return this;
         }
-        public void PasswordInput(string slaptazodis)
+        public LoginPage PasswordInput(string slaptazodis)
         {
             password.SendKeys(slaptazodis + Keys.Enter);
+            return this;
         }
-        public void AssertLogoutButtonVisible()
+        public LoginPage AssertLogoutButtonVisible()
         {
             Assert.IsTrue(logoutButton.Displayed);
+            return this;
         }
-        public void AssertIncorrectPassword(string error)
+        public LoginPage AssertIncorrectPassword(string error)
         {
             Assert.AreEqual(error, errorMessage.Text);
+            return this;
         }
-        public void AssertIncorrectUsername(string error)
+        public LoginPage AssertIncorrectUsername(string error)
         {
             Assert.AreEqual(error, errorMessage.Text);
+            return this;
         }
     }
 

@@ -20,35 +20,50 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         [Test]
         public void CorrectSearch()
         {
-            homePage.NavigateToSearch();
-            homePage.CorrectSearch("petnešos");
-            homePage.AssertCorrectSearch("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS");   
+            homePage
+                .NavigateToSearch()
+                .CorrectSearch("petnešos")
+                .AssertCorrectSearch("DOG Copenhagen petnešos Comfort walk Pro NAUJAS MODELIS");   
         }
 
         [Test]
         public void SelectItemColorAndSize()
         {
-            homePage.NavigateToSearch();
-            homePage.CorrectSearch("petnešos");
-            homePage.CorrectSearhClick();
-            homePage.SelectColor();
-            homePage.SelectSize();
-            homePage.AssertColorSelect("Mėlyna");
-            homePage.AssertSizeSelect("L");
+            homePage
+                .NavigateToSearch()
+                .CorrectSearch("petnešos")
+                .CorrectSearhClick()
+                .SelectColor()
+                .SelectSize()
+                .AssertColorSelect("Mėlyna")
+                .AssertSizeSelect("L");
         }
 
         [Test]
         public void FacebookWorking()
         {
-            homePage.FacebookClick();
-            homePage.AssertFacebookWorking();    
+            homePage
+                .FacebookClick()
+                .AssertFacebookWorking();
+            TakeScreenshot();
         }
 
         [Test]
         public void InstagramWorking()
         {
-            homePage.InstagramClick();
-            homePage.AssertInstagramWorking();
+            homePage
+                .InstagramClick()
+                .AssertInstagramWorking();
+            TakeScreenshot();
+        }
+
+        [Test]
+        public void TermsAndConditionsInfoPageWorking()
+        {
+
+            homePage
+                .TermsAndConditionsInfo()
+                .AssertTermsAndConditionsInfoPageWorking();
         }
     }
 }

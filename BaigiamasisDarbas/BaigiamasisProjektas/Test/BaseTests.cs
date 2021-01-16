@@ -32,7 +32,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             if (driverName == "firefox")
             {
                 driver = new FirefoxDriver();
-            }
+            } 
         }
         public void TakeScreenshot()
         {
@@ -50,7 +50,6 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
                 TakeScreenshot();
             }
         }
-
         public ChromeOptions GetChromeConfigurations()
         {
             ChromeOptions configurations = new ChromeOptions();

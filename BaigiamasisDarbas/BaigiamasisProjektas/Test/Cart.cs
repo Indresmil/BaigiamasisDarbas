@@ -19,15 +19,17 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         [Test]
         public void AddToCart()
         {
-            cartPage.AddToCart();
-            cartPage.AssertAddedToCart("“Alpha Spirit tik su žuvimi, 200 gr” - įdėtas į krepšelį");
+            cartPage
+                .AddToCart()           
+                .AssertAddedToCart("“Alpha Spirit tik su žuvimi, 200 gr” - įdėtas į krepšelį");
         }
 
         [Test]
         public void CartPreview()
         {
-            cartPage.CartPreview();
-            cartPage.AssertContinueBillingButtonVisible("TĘSTI ATSISKAITYMĄ");
+            cartPage
+                .CartPreview()
+                .AssertContinueBillingButtonVisible("TĘSTI ATSISKAITYMĄ");
         }
    
     }

@@ -16,25 +16,30 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement enterIncorrectEmail => driver.FindElement(By.Id("wpforms-12231-field_1-error"));
         private IWebElement nameField => driver.FindElement(By.Id("wpforms-12231-field_0"));
         private IWebElement nameFieldError => driver.FindElement(By.Id("wpforms-12231-field_0-error"));
-        public void GoToContacts()
+        public ContactsPage GoToContacts()
         {
             contacts.Click();
+            return this;
         }
-        public void AssertContactsPageWorking()
+        public ContactsPage AssertContactsPageWorking()
         {
             Assert.AreEqual("SUSISIEKITE SU MUMIS", contactsPageInfo.Text);
+            return this;
         }
-        public void AddToEmailLine(string email)
+        public ContactsPage AddToEmailLine(string email)
         {
             enterEmail.SendKeys(email + Keys.Enter);
+            return this;
         }
-        public void AssertIncorectEmail(string emailMessage) 
+        public ContactsPage AssertIncorectEmail(string emailMessage) 
         {
             Assert.AreEqual(emailMessage, enterIncorrectEmail.Text);
+            return this;
         }
-        public void AssertFillInNameField(string nameFieldMessage)
+        public ContactsPage AssertFillInNameField(string nameFieldMessage)
         {
             Assert.AreEqual(nameFieldMessage, nameFieldError.Text);
+            return this;
         }
     }    
 }
