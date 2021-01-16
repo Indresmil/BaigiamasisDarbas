@@ -42,6 +42,6 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         {
             Assert.AreEqual(buttonMessage, billingButtonVisible.Text);
         }
-        
+
     }
 }

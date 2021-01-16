@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NmVNkp5FS7phPzp+oaM2ihLIYKZs35pIi3zb0x5kk39Gk/uncKKS/qpRlUIR4CwvKGpDtxiVmyNDvnC8oVHl+w==",
+  "dgSpecHash": "U54gLr0HgkcXKjW6oKCjJ1UAdvnc5HNyOrMB1qpg+pacOMM5b9ANUrT/KehY3aixkd3/iAa9wX6sQges2smL5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Home PC\\Desktop\\CSharp\\BaigiamasisDarbas\\BaigiamasisDarbas\\BaigiamasisDarbas.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\Home PC\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\selenium.webdriver.chromedriver\\87.0.4280.8800\\selenium.webdriver.chromedriver.87.0.4280.8800.nupkg.sha512",
+    "C:\\Users\\Home PC\\.nuget\\packages\\selenium.webdriver.geckodriver\\0.29.0\\selenium.webdriver.geckodriver.0.29.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Home PC\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",

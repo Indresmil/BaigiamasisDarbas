@@ -19,9 +19,9 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         private IWebElement size => driver.FindElement(By.CssSelector("#pa_dydis"));
         private IWebElement sizeSelect => driver.FindElement(By.CssSelector("#pa_dydis > option:nth-child(2)"));
         private IWebElement facebook => driver.FindElement(By.CssSelector("#social-icons > a:nth-child(1) > i"));
-        private IWebElement facebookText => driver.FindElement(By.CssSelector("#u_0_0 > span._33vv > a"));
+        private IWebElement facebookText => driver.FindElement(By.Id("u_0_h"));
         private IWebElement instagram => driver.FindElement(By.CssSelector("#social-icons > a:nth-child(2) > i"));
-        private IWebElement instagramText => driver.FindElement(By.CssSelector("#react-root > section > main > div > header > section > div.nZSzR"));
+        private IWebElement instagramText => driver.FindElement(By.CssSelector("body > div.RnEpo.Yx5HN > div > div > div > div.mt3GC > button.aOOlW.bIiDR"));
 
         public void NavigateToSearch()
         {
@@ -61,7 +61,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         }
         public void AssertFacebookWorking()
         {
-            Assert.AreEqual("Letenos.lt", facebookText.Text);
+            Assert.IsTrue(facebookText.Displayed);
         }
         public void InstagramClick()
         {
@@ -69,7 +69,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Pages
         }
         public void AssertInstagramWorking()
         {
-            Assert.AreEqual("letenos.lt\r\nFollow", instagramText.Text);
+            Assert.IsTrue(instagramText.Displayed);
         }
     }
 }
