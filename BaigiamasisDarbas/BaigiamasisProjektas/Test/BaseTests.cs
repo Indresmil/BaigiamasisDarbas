@@ -43,7 +43,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
             screenshot.SaveAsFile(screenshotFile, ScreenshotImageFormat.Png);
             TestContext.AddTestAttachment(screenshotFile, "Mano screenshotas");
         }
-        public void PadarykScreenshotaJeiguTestasFailed()
+        public void TakeScreenshotIFTestFailed()
         {
             if (TestContext.CurrentContext.Result.Outcome.Status != TestStatus.Passed)
             {

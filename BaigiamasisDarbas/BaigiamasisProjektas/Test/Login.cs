@@ -25,6 +25,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
                 .UsernameInput("indre@gmail.com")
                 .PasswordInput("slaptazodis123")
                 .AssertIncorrectUsername("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
+            TakeScreenshotIFTestFailed();
         }
 
         [Test]
@@ -35,6 +36,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
                 .UsernameInput("indre.smilgaityte@gmail.com")
                 .PasswordInput("slaptazodis")
                 .AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
+            TakeScreenshotIFTestFailed();
         }
         [Test]
         public void UsernameKeyInsensitive()
@@ -54,6 +56,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
                 .UsernameInput("indre.smilgaityte@gmail.com")
                 .PasswordInput("SLAPTAZODIS123")
                 .AssertIncorrectPassword("KLAIDA: Neteisingas vartotojo vardas arba slaptažodis.");
+            TakeScreenshotIFTestFailed();
         }
 
         [Test]

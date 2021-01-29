@@ -17,7 +17,7 @@ namespace BaigiamasisDarbas.BaigiamasisProjektas.Test
         }
 
         [Test]
-        public void AddToCart()
+        public void ContactPageWorking()
         {
             contactsPage
                 .GoToContacts()
